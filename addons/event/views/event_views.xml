@@ -241,7 +241,7 @@
                                 <field name="address_id"
                                     context="{'show_address': 1}"
                                     options='{"always_reload": True}'/>
-                                <label for="seats_limited" string="Limit Registrations"/>
+                                <label for="seats_limited" string="Limit Registrations" invisible="1"/>
                                 <div>
                                     <field name="seats_limited" invisible="1"/>
                                     <span attrs="{'invisible': [('seats_limited', '=', False)], 'required': [('seats_limited', '=', False)]}">to <field name="seats_max" class="oe_inline"/> Attendees</span>
