@@ -243,21 +243,21 @@
                                     options='{"always_reload": True}'/>
                                 <label for="seats_limited" string="Limit Registrations"/>
                                 <div>
-                                    <field name="seats_limited"/>
+                                    <field name="seats_limited" invisible="1"/>
                                     <span attrs="{'invisible': [('seats_limited', '=', False)], 'required': [('seats_limited', '=', False)]}">to <field name="seats_max" class="oe_inline"/> Attendees</span>
                                 </div>
-                                <field name="auto_confirm"/>
+                                <field name="auto_confirm" invisible="1"/>
                             </group>
                         </group>
                         <notebook>
-                            <page string="Tickets" name="tickets">
+                            <page string="Tickets" name="tickets" invisible="1">
                                 <field name="event_ticket_ids" context="{
                                     'default_event_name': name,
                                     'tree_view_ref': 'event.event_event_ticket_view_tree_from_event',
                                     'form_view_ref': 'event.event_event_ticket_view_form_from_event',
                                     'kanban_view_ref': 'event.event_event_ticket_view_kanban_from_event'}" mode="tree,kanban"/>
                             </page>
-                            <page string="Communication" name="event_communication">
+                            <page string="Communication" name="event_communication" invisible="1">
                                 <field name="event_mail_ids">
                                     <tree string="Communication" editable="bottom">
                                         <field name="sequence" widget="handle"/>
@@ -270,7 +270,7 @@
                                     </tree>
                                 </field>
                             </page>
-                            <page string="Notes" name="event_notes">
+                            <page string="Notes" name="event_notes" invisible="1">
                                 <field name="note" placeholder="Add a note..."/>
                             </page>
                         </notebook>
