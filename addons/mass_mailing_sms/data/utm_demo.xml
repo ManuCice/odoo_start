@@ -4,7 +4,7 @@
         <field name="name">Bioutifoul SMS</field>
         <field name="color" eval="2"/>
     </record>
-    <record id="utm_campaign_0" model="utm.campaign">
+    <record id="utm_campaign_0" invisible="1" model="utm.campaign">
         <field name="name">XMas Promo</field>
         <field name="stage_id" ref="utm.campaign_stage_1"/>
         <field name="user_id" ref="base.user_admin"/>
